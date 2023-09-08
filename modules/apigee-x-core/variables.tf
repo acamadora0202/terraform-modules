@@ -74,7 +74,8 @@ variable "apigee_instances" {
   description = "Apigee Instances (only one instance for EVAL)."
   type = map(object({
     region               = string
-    ip_range             = string
+    runtime_ip_cidr_range = string
+    troubleshooting_ip_cidr_range = string
     environments         = list(string)
     keyring_create       = optional(bool, true)
     keyring_name         = optional(string, null)
