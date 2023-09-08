@@ -72,7 +72,7 @@ module "kms-inst-disk" {
 }
 
 module "apigee" {
-  source     = "github.com/acamadora0202/cloud-foundation-fabric/modules/apigee?ref=v0.0.1"
+  source     = "github.com/acamadora0202/cloud-foundation-fabric//modules/apigee?ref=v0.0.1"
   project_id = var.project_id
   organization = {
     display_name            = var.org_display_name
