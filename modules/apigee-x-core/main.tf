@@ -79,7 +79,7 @@ module "apigee" {
   organization = {
     display_name            = var.org_display_name
     description             = var.org_description
-    #authorized_network      = var.network
+    authorized_network      = var.network
     runtime_type            = "CLOUD"
     billing_type            = var.billing_type
     database_encryption_key = module.kms-org-db.key_ids["org-db"]
