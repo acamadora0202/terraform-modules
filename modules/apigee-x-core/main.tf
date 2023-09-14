@@ -20,8 +20,8 @@ locals {
     region               = value.region
     environments         = value.environments
     psa_ip_cidr_range    = value.ip_range
-    runtime_ip_cidr_range         = value.runtime_ip_cidr_range
-    troubleshooting_ip_cidr_range = value.troubleshooting_ip_cidr_range
+    #runtime_ip_cidr_range         = value.runtime_ip_cidr_range
+    #troubleshooting_ip_cidr_range = value.troubleshooting_ip_cidr_range
     disk_encryption_key  = module.kms-inst-disk[key].key_ids[value.key_name]
     consumer_accept_list = value.consumer_accept_list
   } }
