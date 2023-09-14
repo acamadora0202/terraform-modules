@@ -74,12 +74,12 @@ module "kms-inst-disk" {
 }
 
 module "apigee" {
-  source     = "github.com/acamadora0202/cloud-foundation-fabric//modules/apigee?ref=v0.0.2"
+  source     = "github.com/acamadora0202/cloud-foundation-fabric//modules/apigee"
   project_id = var.project_id
   organization = {
     display_name            = var.org_display_name
     description             = var.org_description
-    #authorized_network      = var.network
+    authorized_network      = var.network
     runtime_type            = "CLOUD"
     billing_type            = var.billing_type
     database_encryption_key = module.kms-org-db.key_ids["org-db"]
